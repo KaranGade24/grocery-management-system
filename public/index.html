@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grosari Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product_box.css" />
+  </head>
+  <!-- http://localhost:5500/WEB_DEVLOPMENT/Karan_Web_Developmeent/Projects/Grosary_Management_System/index.html -->
+  <body>
+    <header>
+      <nav>
+        <div class="all-functions-of-system">
+          <span id="add-product">Add Products</span>
+          <span id="sell-product">Sell Products</span>
+          <!-- <span id="update-product">Update Products</span>
+          <span id="remove-product">Remove Products</span> -->
+          <span id="today-revenue">Total Revenue</span>
+          <span id="all-product">All Products</span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 
+                                    FOR ADD PRODUCT 
+                                -->
+      <div class="image">
+        <div class="all-functions-of-system-box">
+          <img src="./images/groceryBackgroundImage.jpg" alt="" />
+
+          <div class="all-boxes">
+            <div class="product-box add-product-input">
+              <div class="product-info">
+                <label for="product-name">Product Name :</label>
+                <input
+                  id="product-name"
+                  type="text"
+                  placeholder="Enter product name"
+                />
+              </div>
+              <div class="product-info">
+                <label for="product-id">Product Id :</label>
+                <input
+                  id="product-id"
+                  type="number"
+                  placeholder="Enter product Id"
+                />
+              </div>
+              <div class="product-info">
+                <label for="product-quantity">Product Quantity :</label>
+                <input
+                  id="product-quantity"
+                  type="number"
+                  placeholder="Enter product Quantity"
+                />
+              </div>
+              <div class="product-info">
+                <label for="product-price">Product price :</label>
+                <input
+                  id="product-price"
+                  type="number"
+                  placeholder="Enter unit price"
+                />
+              </div>
+              <div class="add-button">
+                <button id="add-product-button">Add</button>
+              </div>
+            </div>
+
+            <!-- FOR SELL PRODUCTS -->
+
+            <div class="sell-box">
+              <label for="id">ID: </label>
+              <input id="pro-id" type="number" placeholder="Enter Prduct ID" />
+              <br /><br />
+              <label for="quntity">Quantity: </label>
+              <input
+                id="sell-quntity"
+                type="number"
+                placeholder="Enter Prduct quantity"
+              />
+              <div id="sell-btn">
+                <button id="sell-btn">Sell</button>
+              </div>
+            </div>
+
+            <!-- 
+                                    FOR UPDATE PRODUCT 
+                                -->
+
+            <div class="product-box update-product-input">
+              <div class="product-info">
+                <label for="product-name">Product :</label>
+                <input type="text" placeholder="Enter product name" />
+              </div>
+              <div class="product-info">
+                <label for="product-quantity">Product Quantity :</label>
+                <input type="text" placeholder="Enter updated Quantity" />
+              </div>
+              <div class="product-info">
+                <label for="product-price">Product price :</label>
+                <input type="text" placeholder="Enter updated unit price" />
+              </div>
+            </div>
+
+            <!-- 
+                                    FOR REMOVE  PRODUCT 
+                                -->
+
+            <div class="product-box remove-product-input">
+              <div class="product-info">
+                <label for="product-name">Product :</label>
+                <input type="text" placeholder="Enter product name" />
+              </div>
+            </div>
+
+            <!-- 
+                                    FOR TOTAL REVENUE  PRODUCT OF PARTICULAR DAY 
+                                -->
+
+            <div id="total-revenue" class="product-box revenue-product-input">
+              <div class="sold-list-title">Sold product list</div>
+              <div class="box-for-table">
+                <table>
+                  <thead>
+                    <th>Sr. NO.</th>
+                    <th>Product Name</th>
+                    <th>Product Quantity</th>
+                    <th>Price</th>
+                    <th>Total Price</th>
+                  </thead>
+                  <tbody id="revenue-t-body">
+                    <!-- <tr>
+                  <td>1</td>
+                  <td>product1</td>
+                  <td>Quantity1</td>
+                  <td>120</td>
+                </tr> -->
+                    <tr>
+                      <td>Total :</td>
+                      <td>100</td>
+                      <td>1000</td>
+                      <td>100000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 
+                    FOR DISPLAYING ALL   PRODUCTS 
+                                -->
+            <div class="update-product">
+              <div class="product-info">
+                <label for="product-name">Product Name :</label>
+                <input
+                  id="product-update-name"
+                  type="text"
+                  placeholder="Enter product name"
+                />
+              </div>
+              <div class="product-info">
+                <label for="product-quntity">Product Quantity :</label>
+                <input
+                  id="product-update-quantity"
+                  type="text"
+                  placeholder="Enter product quantity"
+                />
+              </div>
+              <div class="product-info">
+                <label for="product-price">Product price :</label>
+                <input
+                  id="product-update-price"
+                  type="text"
+                  placeholder="Enter product price"
+                />
+              </div>
+              <button id="cancel-button" class="cancel-btn">Cancel</button>
+              <button id="update-button" class="cancel-btn">Update</button>
+            </div>
+
+            <div class="product-box all-product-list">
+              <div class="all-product-list-title">All product list</div>
+              <div class="box-for-table">
+                <table>
+                  <thead>
+                    <th>Sr. NO.</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                    <th>Delete</th>
+                    <th>Update Product</th>
+                  </thead>
+                  <tbody id="all-products-table-body">
+                    <!-- <tr>
+                  <td>1</td>
+                  <td>123</td>
+                  <td>product1</td>
+                  <td>Quantity1</td>
+                  <td>120</td>
+                  <td>1200</td>
+                  <td><button>Delete</button></td>
+                  <td><button>Update</button></td>
+                </tr> -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
