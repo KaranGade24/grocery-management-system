@@ -288,6 +288,11 @@ addProductBtn.addEventListener("click", (e) => {
     QUANTITY: productQuantity.value,
     PRICE: productPrice.value,
   };
+  productName.value = "";
+  productId.value = "";
+  productQuantity.value = "";
+  productPrice.value = "";
+
   addData(productData);
   getData();
 });
@@ -385,9 +390,10 @@ if (!(userName == "user" && userPassword == 123)) {
 }
 
 const logOut = document.getElementById("log-out");
+console.log(logOut);
 
 logOut.addEventListener("click", () => {
-  var conf = confirm("Your are sure");
+  var conf = confirm("Are you sure");
   if (conf) {
     localStorage.clear();
     login();
