@@ -2,13 +2,21 @@ const express = require("express");
 const sql = require("sqlite3");
 const cors = require("cors");
 const path = require("path");
-const { json } = require("express");
+const res = require("express/lib/response");
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/login",(req,res)=>
+{
+  res.sendFile(path.join(__dirname , "public/login/loginPage.html"));
+});
+
+
+
 
 const PORT = 8080;
 
@@ -49,6 +57,44 @@ db.serialize(() => {
     }
   );
 });
+//
+//
+//TO CHECK USER IS PRESENT OR NOT
+
+app.post("/login",(req,res)=>{
+const {userData} = req.body;
+
+db.serialize(()=>{
+
+  db.all("SELECT * FROM USER",(err,row)=>{
+    if(err){
+      console.log(err);
+      
+      return res.json(err);
+    }
+    else{
+      if(row && row.length)
+      {
+        if((row[0].NAME == userData.name) &&(row[0].PASSWORD == userData.password))
+        {
+      console.log(row);
+
+         return res.json("login successful");
+        }
+        else{
+
+          return res.status(401).json("invalid user name or password");
+        }
+      }
+      else{
+        return res.status(401).json("invalid user name or password");
+      }
+    }
+    
+  })
+})
+})
+
 //
 //
 db.serialize(() => {

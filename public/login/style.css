@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: linear-gradient(130deg, rgba(7, 175, 241, 0.877), #bd15a7);
+  
+    /* background-color: rgb(229, 116, 135); */
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+  }
+  
+  .login-page-box {
+    box-shadow: 0px 0px 50px black;
+    margin: auto;
+    margin-top: 48px;
+    background-color: rgba(255, 255, 255, 0.950);
+    width: 400px;
+    height: 530px;
+    border-radius: 20px;
+    border: 2px solid white;
+    padding: 10px;
+    /* position: absolute; */
+  }
+  
+  .login-name p {
+    margin: 20px;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+  }
+  .email-pass-box {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  
+  .email-id {
+    /* display: flex; */
+    padding: 10px;
+  }
+  
+  input {
+    font-size: 17px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    width: 90%;
+  }
+  
+  input::placeholder {
+    color: black;
+  }
+  label{
+    font-size: 18px;
+  }
+  .password {
+    padding: 10px;
+    padding-left: 8px;
+  }
+  
+  .forgot {
+    width: 100%;
+    height: fit-content;
+    font-size: 12px;
+    display: flex;
+    justify-content: right;
+  }
+  
+  .forgot p {
+    /* padding: 5px; */
+    margin-right: 41px;
+  }
+  .forgot p:hover {
+    cursor: pointer;
+    color: blue;
+  }
+  .login-btn {
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    background: linear-gradient(90deg, rgb(21, 141, 189), #bd15a7);
+  }
+  
+  .or{
+    text-align: center;
+    margin: auto;
+  }
+  
+  .login-btn:hover {
+    cursor: pointer;
+    color: blue;
+  }
+  
+  .all-login-img {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    /* background-color: red; */
+  }
+  
+  .all-img{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .all-img img{
+    padding:10px;
+    width:25px;
+    border-radius: 30px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    body {
+      background-color: black;
+    }
+    .login-page-box {
+      width: 300px;
+    }
+    .login-btn{
+      margin-left: 20px;
+      width:200px;
+    }
+  }
+
+
+  

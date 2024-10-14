@@ -68,3 +68,19 @@ nav {
     padding: 3px;
   }
 }
+#log-out{
+  color:#00ff43;
+  font-size: 18px;
+  width:fit-content;
+  height: fit-content;
+  padding:7px;
+  background-color:rgb(46, 45, 45);
+  border-radius: 20px;
+  cursor:pointer;
+
+}
+#log-out:hover{
+  background-color:hsl(0, 91%, 58%);
+
+
+}

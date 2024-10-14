@@ -365,3 +365,32 @@ getSoldData();
 // deleteData(10);
 
 // getData();
+
+const userName = localStorage.getItem("userName");
+const userPassword = localStorage.getItem("userPassword");
+function login() {
+  if (
+    window.location.pathname == "/" &&
+    userName == "user" &&
+    userPassword == 123
+  ) {
+    window.location.href = "/";
+  } else {
+    window.location.href = "/login";
+  }
+}
+
+if (!(userName == "user" && userPassword == 123)) {
+  login();
+}
+
+const logOut = document.getElementById("log-out");
+
+logOut.addEventListener("click", () => {
+  var conf = confirm("Your are sure");
+  if (conf) {
+    localStorage.clear();
+    login();
+    // location.reload();
+  }
+});
