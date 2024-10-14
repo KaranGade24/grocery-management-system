@@ -44,6 +44,10 @@ const updatedName = document.querySelector("#product-update-name");
 const updatedPrice = document.querySelector("#product-update-price");
 const updatedQuantity = document.querySelector("#product-update-quantity");
 
+
+const deleteSoldBtn = document.querySelector("#del-revenue")
+
+
 // 1. FOR ADD PRODUCT
 
 // addProductBox.style.display = "none";
@@ -337,10 +341,10 @@ async function sendSoldData(soldProductData) {
 //
 
 async function getSoldData() {
+  revenueTBody.innerHTML = "";
   const res = await fetch(URL + "/sold-products");
   const data = await res.json();
   //   console.log(data);
-  revenueTBody.innerHTML = "";
   var count = 0;
   var totalQ = 0;
   var totalP = 0;
@@ -400,3 +404,23 @@ logOut.addEventListener("click", () => {
     // location.reload();
   }
 });
+
+
+
+deleteSoldBtn.addEventListener("click",()=>{
+  var conf= confirm("Are you sure");
+  if(conf)
+  {
+    soldDel();
+  revenueTBody.innerHTML = "";
+    getSoldData();
+  }
+})
+
+async function soldDel() {
+  const res = await fetch("/sold-products/delete",{
+    method:"DELETE",
+  })
+  const msg = await res.json();
+  alert(msg);
+}

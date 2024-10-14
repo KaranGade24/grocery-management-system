@@ -131,6 +131,18 @@ input {
                 FOR TOTAL REVENUE  PRODUCT OF PARTICULAR DAY 
                 --> */
 
+#del-revenue{
+  width:fit-content;
+  height:fit-content;
+  padding:10px;
+  margin-top:10px;
+  background-color: black;
+  color:white;
+  border-radius: 20px;
+  border:2px solid yellow;
+  font-size: 18px;
+}
+
 #total-revenue {
   display: none;
 }
