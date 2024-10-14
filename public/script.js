@@ -424,3 +424,5 @@ async function soldDel() {
   const msg = await res.json();
   alert(msg);
 }
+
+//
