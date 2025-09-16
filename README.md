@@ -2,13 +2,14 @@
 
 ## Introduction
 
-This is a comprehensive web-based Grocery Management System designed to streamline inventory control and sales tracking. The application features a secure login system, a user-friendly interface for managing products, tracking sales, and viewing revenue. It features a robust backend built with Node.js and Express.js, and a dynamic frontend developed using HTML, CSS, and JavaScript.
+This is a comprehensive web-based Grocery Management System designed to streamline inventory control and sales tracking. The application features a secure login system, a user-friendly interface for managing products, tracking sales, and viewing revenue. The project is organized into a clean folder structure, separating the backend API from the frontend public assets.
 
 ---
 
 ## Features
 
 - **User Authentication:** Secure login system to protect the management interface.
+- **Separated Backend and Frontend:** The backend API and frontend code are organized in separate `api` and `public` directories for better maintainability.
 - **Product Management:** Add, update, and delete products from the inventory.
 - **Inventory Control:** Keep track of product quantities and prices.
 - **Sales Tracking:** Record product sales and automatically update inventory.
@@ -19,20 +20,21 @@ This is a comprehensive web-based Grocery Management System designed to streamli
 
 ## Technologies Used
 
-### Backend
+### Backend (`api/`)
 
 - **Node.js:** A JavaScript runtime environment for executing server-side code.
 - **Express.js:** A minimal and flexible Node.js web application framework.
 - **sqlite3:** A Node.js wrapper for the SQLite3 database.
 - **cors:** A Node.js package for enabling Cross-Origin Resource Sharing.
+- **nodemon:** A tool that helps develop Node.js based applications by automatically restarting the node application when file changes are detected.
 
-### Frontend
+### Frontend (`public/`)
 
 - **HTML:** The standard markup language for creating web pages.
 - **CSS:** A stylesheet language used for designing the presentation of the web pages.
 - **JavaScript:** The programming language that enables interactive web pages and communication with the backend.
 
-### Database
+### Database (`api/`)
 
 - **SQLite:** A self-contained, high-reliability, embedded, SQL database engine.
 
@@ -42,11 +44,13 @@ This is a comprehensive web-based Grocery Management System designed to streamli
 
 ```
 .
+├── vercel.json
 ├── README.md
-├── database.db
-├── index.js
-├── package-lock.json
-├── package.json
+├── api
+│   ├── database.db
+│   ├── index.js
+│   ├── package-lock.json
+│   └── package.json
 └── public
     ├── images
     │   ├── backgroundImg.jpg
@@ -59,7 +63,7 @@ This is a comprehensive web-based Grocery Management System designed to streamli
     │   ├── loginPage.html
     │   ├── script.js
     │   └── style.css
-    ├── fetch.js
+    ├── fetchh.js
     ├── index.html
     ├── product_box.css
     ├── script.js
@@ -68,21 +72,24 @@ This is a comprehensive web-based Grocery Management System designed to streamli
 
 ### File-by-File Breakdown
 
-- **`index.js`**: The main backend file that sets up the Express server, connects to the SQLite database, and defines all API endpoints for user authentication, product management, and sales tracking.
-- **`package.json`**: Contains project metadata and lists dependencies and scripts.
-- **`database.db`**: The SQLite database file storing user credentials, product, and sales data.
-- **`public/`**: Contains all static frontend files.
-  - **`index.html`**: The main application page for managing groceries after logging in.
+- **`api/`**: This directory contains all the backend code.
+
+  - **`index.js`**: The main backend file that sets up the Express server, connects to the SQLite database, and defines all API endpoints.
+  - **`package.json`**: Contains backend project metadata, dependencies, and scripts.
+  - **`database.db`**: The SQLite database file.
+
+- **`public/`**: This directory contains all the frontend files that are served to the client.
+  - **`index.html`**: The main application page for managing groceries.
   - **`login/loginPage.html`**: The initial login page for user authentication.
-  - **`style.css`, `product_box.css`, `login/style.css`**: CSS files for styling the application.
-  - **`script.js`, `fetchh.js`, `login/script.js`**: JavaScript files for UI interactivity and API communication.
-  - **`images/`**: Contains images for the main application and login page.
+  - **`*.css`**: CSS files for styling the application.
+  - **`*.js`**: JavaScript files for UI interactivity and API communication.
+  - **`images/`**: Contains images for the application's frontend.
 
 ---
 
 ## API Endpoints
 
-The backend provides the following RESTful APIs:
+The backend provides the following RESTful APIs for managing the grocery inventory:
 
 | Method | Endpoint                | Description                                        |
 | ------ | ----------------------- | -------------------------------------------------- |
@@ -104,11 +111,11 @@ The backend provides the following RESTful APIs:
     ```bash
     git clone <repository-url>
     ```
-2.  **Navigate to the project directory:**
+2.  **Navigate to the backend directory:**
     ```bash
-    cd git-clone/grocerymanagementsystem-
+    cd git-clone/grocerymanagementsystem-/api
     ```
-3.  **Install the dependencies:**
+3.  **Install the backend dependencies:**
     ```bash
     npm install
     ```
@@ -126,5 +133,3 @@ For initial access, you can use the following default credentials:
 
 - **Username:** `user`
 - **Password:** `123`
-
---
