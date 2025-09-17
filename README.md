@@ -1,6 +1,6 @@
 # Grocery Management System
 
-This is a full-stack web-based Grocery Management System for managing inventory, sales, and revenue, with user authentication. The project is built using Node.js, Express, SQLite, and a modern HTML/CSS/JS frontend.
+Academic project (DBMS coursework – 2nd Year) showcasing a Grocery Management System built with Node.js, Express, and SQLite. Includes features for product inventory, sales tracking, and revenue dashboards. Demonstrates practical application of SQL, CRUD operations, and full-stack development concepts.
 
 ---
 
