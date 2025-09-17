@@ -1,6 +1,6 @@
 # Grocery Management System
 
-Academic project (DBMS coursework – 2nd Year) showcasing a Grocery Management System built with Node.js, Express, and SQLite. Includes features for product inventory, sales tracking, and revenue dashboards. Demonstrates practical application of SQL, CRUD operations, and full-stack development concepts.
+Academic project (DBMS coursework – 3nd Year) showcasing a Grocery Management System built with Node.js, Express, and SQLite. Includes features for product inventory, sales tracking, and revenue dashboards. Demonstrates practical application of SQL, CRUD operations, and full-stack development concepts.
 
 ---
 
