@@ -17,11 +17,13 @@ app.get("/login", (req, res) => {
 const PORT = 8080;
 
 //creating database
-const db = new sql.Database("./database.db", (err) => {
+const dbPath = path.join(__dirname, "database.db");
+
+const db = new sql.Database(dbPath, (err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
-    console.log("database created ");
+    console.log("Database connected");
   }
 });
 
